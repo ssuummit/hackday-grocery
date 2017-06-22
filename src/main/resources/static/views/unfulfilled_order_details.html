@@ -1,0 +1,95 @@
+<div class="generic-container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><span class="lead">Order Details</span></div>
+        <div class="panel-body">
+            <form name="myForm1" class="form-horizontal" ng-submit="submitOrderForm()" role="form" ng-model="createOrderData">
+                <table align="left" class="table table-bordered table-bordered" style="width: 30%;">
+                    <tr>
+                        <th scope="row">Customer Name</th>
+                        <td>Sumit Nagariya</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Address</th>
+
+                        <td>Flipkart India Pvt Ltd</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Order Date</th>
+
+                        <td>22-Jun-2017</td>
+                    </tr>
+                </table>
+
+                <table align="center" id="bootstrap_git_demo" class="table table-bordered table-bordered" style="width: 100%; ">
+                    <thead>
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price Per Item</th>
+                        <th>Total Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="data in orderDetails">
+                        <td>
+                            {{ data.itemCode }}</td>
+                        <td>{{ data.itemDesc }}</td>
+                        <td>
+                            <!--<div class="input-group bootstrap-touchspin"><span class="input-group-btn">-->
+                                <!--<button class="btn btn-default bootstrap-touchspin-down" type="button">-</button>-->
+                            <!--</span><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>-->
+                                <!--<input type="text" name="" value="1" class="input-qty form-control text-center" style="display: block;">-->
+                                <!--<span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;">-->
+                                <!--</span>-->
+                                <!--<span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-up" type="button">+</button>-->
+                                <!--</span>-->
+                            <!--</div>-->
+
+                        </td>
+
+                        <td>{{ data.price }}</td>
+                        <td>50 Rs</td>
+                        <td>
+                            <!--<button title="" type="button"-->
+                                    <!--class="btn btn-danger remove show_tip"-->
+                                    <!--data-original-title="Remove from list" ng-click="remove()">-->
+                                <!--<i class="fa fa-trash-o"></i>-->
+                            <!--</button>-->
+                        </td>
+                    </tr>`
+                    </tbody>
+
+
+                </table>
+
+
+                <table align="right" class="table table-bordered table-bordered" style="width: 30%;">
+                    <tr>
+                        <th scope="row">Sub Total</th>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">VAT</th>
+
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>120</td>
+                    </tr>
+                </table>
+
+
+
+
+                <div>
+                    <label class="control-label bottom-left">Slot Time: 11:00 AM</label>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

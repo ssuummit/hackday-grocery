@@ -10,5 +10,9 @@ app.config(function($routeProvider) {
         .when('/orderDetails', {
             templateUrl : '/views/order_details.html',
             controller  : 'orderDetailsController'
+        })
+        .when('/nextOrderDetails', {
+            templateUrl : '/views/unfulfilled_order_details.html',
+            controller  : 'unfulfilledOrderDetailsController'
         });
 });
