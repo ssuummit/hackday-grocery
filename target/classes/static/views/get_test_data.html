@@ -1,0 +1,118 @@
+<div class="generic-container">
+<div class="panel panel-default">
+
+    <div class="panel-heading"><span class="lead">Get Test Data </span></div>
+    <div class="panel-body">
+
+    <form name="getTestDataForm" class="form-horizontal" ng-submit="getTestData()" role="form">
+        <div class="tab">
+
+            <label class="control-label">Select Category</label>
+            <select id="category" class="form-control" ng-model="category" required>
+                <option value="">Select category</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Books">Books</option>
+                <option value="TV">TV</option>
+                <option value="Grocery">Grocery</option>
+            </select>
+
+            <label class="control-label">Quantity</label>
+            <select id="quantity" class="form-control" ng-model="quantity" required>
+                <option value="">Select quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label class="control-label">Seller Type</label>
+            <select class="form-control" ng-model="selectedSeller" ng-options="seller as seller.name for seller in sellers" required>
+                <option value="">Select seller type</option>
+            </select>
+        </div>
+
+        <div ng-if="selectedSeller.flow">
+            <label class="control-label">Flow Type</label>
+            <br/>
+            <select class="form-control" ng-model="selectedFlow" ng-options="o as o for o in selectedSeller.flow" ng-change="showCustomer()" required>
+                <option value="">Select Flow type</option>
+            </select>
+        </div>
+
+        <div ng-show="isHide">
+            <label class="control-label">Select Customer</label>
+            <br/>
+            <select class="form-control" ng-model="selectedCustomer" ng-options="o as o for o in selectedSeller.customer" ng-change="showWarehouse()" required>
+                <option value="">Select customer</option>
+            </select>
+        </div>
+
+        <div ng-show="displayWarehouse">
+            <label class="control-label">Select Warehouse</label>
+            <br/>
+            <select class="form-control" ng-model="selectedWarehouse" ng-options="o as o for o in selectedSeller.warehouse" required>
+                <option value="">Select warehouse</option>
+            </select>
+        </div>
+
+
+        <br>
+        <br>
+
+        <!--<button type="button" class="btn btn-primary" ng-click="getTestData();">Get Test Data</button>-->
+        <input type="submit" value="Get Test Data" class="btn btn-primary"/>
+        <input type="reset" value="Reset" ng-click="resetTestFormData()" class="btn" /> <br/>
+
+    </form>
+
+
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="panel panel-default" ng-show="items.length">
+    <div class="panel-heading"><span class="lead">List of Results </span></div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Listing Id</th>
+                    <th>Customer Id</th>
+                    <th>Address Id</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in items">
+                    <td>
+                        {{item.listing_id}}
+                    </td>
+                    <td>
+                        {{item.customer_id}}
+                    </td>
+                    <td>
+                        {{item.address_id}}
+                    </td>
+                    <td>
+                        {{item.email}}
+                    </td>
+                    <td>
+                        {{item.password}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>

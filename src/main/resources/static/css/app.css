@@ -1,0 +1,77 @@
+.menu-list{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.home-section{
+    float:left;
+    width: 10%;
+}
+.section{
+    margin-left: 10%;
+    float:left;
+}
+.photo{
+    padding-right: 5px;
+}
+
+body, #mainWrapper {
+    height: 100%;
+    background-color:rgb(245, 245, 245);
+}
+
+body, .form-control{
+    font-size:13px!important;
+}
+
+.floatRight{
+    float:right;
+    margin-right: 18px;
+}
+
+.has-error{
+    color:red;
+}
+
+.generic-container {
+    width:80%;
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.custom-width {
+    width: 80px !important;
+}
+
+.test {
+    margin-bottom: 0px;
+}
+
+
+
+body {
+    margin: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+.mybox {
+    background-color: #2196F3;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+table, th, td {
+    border: 10px solid black;
+    border-collapse: collapse;
+}

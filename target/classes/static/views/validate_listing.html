@@ -1,0 +1,68 @@
+<!--<div class="container text-left">-->
+    <!--<div class="tabs-nav text-center">-->
+        <!--<h3>Validate Listing Config</h3>-->
+    <!--</div>-->
+
+<div class="generic-container">
+    <div class="panel panel-default">
+
+        <div class="panel-heading"><span class="lead">Validate Listing Config</span></div>
+        <div class="panel-body">
+
+    <br>
+    <br>
+
+    <form  name="validateListingForm" class="form-horizontal" ng-submit="submitForm()" role="form">
+        <div class="form-group">
+            <table align="center" class="table table-bordered table-bordered" style="width: 800px;">
+                <tr>
+                    <td class="col-lg-offset-2">
+                        <label for="listingId" class="control-label">Listing Id</label><br>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control " id="listingId" placeholder="Enter Listing Id" ng-model="formData.listingId" ng-minlength="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-lg-offset-2">
+                        <label for="warehouseId" class="control-label">Warehouse Id</label><br>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="warehouseId" placeholder="Enter Warehouse Id" ng-model="formData.warehouseId">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-lg-offset-2">
+                        <label for="customerPin" class="control-label">Customer Pin Code</label><br>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control " id="customerPin" placeholder="Enter Customer Pincode" ng-model="formData.customerPin">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-lg-offset-2">
+                        <label for="orderType" class="control-label">Order Type</label>
+                    </td>
+                    <td>
+                        <select id="orderType" class="form-control" ng-model="formData.orderType">
+                            <option value="">Select order type</option>
+                            <option value="PREPAID">Prepaid</option>
+                            <option value="COD">COD</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div style="text-align: center">
+            <input type="submit" value="Get Listing Config" class="btn btn-primary"/>
+            <input type="reset" value="Reset" ng-click="resetFormData()" class="btn" /> <br/>
+        </div>
+
+</form>
+
+</div>
+        </div>
+    </div>
+
